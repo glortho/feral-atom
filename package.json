@@ -3,7 +3,7 @@
   "theme": "syntax",
   "version": "0.0.0",
   "description": "Base16 Ocean Dark Color Syntax",
-  "repository": "https://github.com/atom/base16-ocean-dark",
+  "repository": "https://github.com/robbschiller/base16-ocean-dark",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
