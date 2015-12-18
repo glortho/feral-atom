@@ -6,119 +6,151 @@
 @import "colors";
 
 atom-text-editor, :host {
-  background-color: @base03;
-  color: @base0;
+    background-color: @base03;
+    color: @base0;
 
-  .invisible-character,
-  .indent-guide {
-    color: @base01;
-  }
+    .invisible-character,
+    .indent-guide {
+        color: @base01;
+    }
 
-  .gutter {
-	min-width: .3em;
-  }
+    .gutter {
+        min-width: .3em;
+    }
 
-  .gutter .line-number {
-    opacity: 1;
-  }
+    .gutter .line-number {
+        opacity: 1;
+    }
 
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: @magenta;
-  }
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: @magenta;
+    }
 
-  .cursor {
-    border-color: @base3;
-  }
+    .cursor {
+        border-color: @base3;
+    }
 
-  .selection .region {
-    background-color: @base02;
-    color: @base03;
-  }
+    .selection .region {
+        background-color: @base02;
+        color: @base03;
+    }
 
-  .line-number.cursor-line-no-selection {
-    background-color: @base01;
-  }
+    .line-number.cursor-line-no-selection {
+        background-color: @base01;
+    }
 
-  .wrap-guide {
-    background-color: @base02;
-  }
+    .wrap-guide {
+        background-color: @base02;
+    }
 }
 
 .bracket-matcher .region {
-  background-color: @base1;
-  opacity: 0.5;
+    background-color: @base1;
+    opacity: 0.5;
 }
 
 .comment {
-  color: @base01;
+    color: @base01;
 }
 
 .entity {
-  color: @orange;
+    color: @orange;
 }
 
 .keyword {
-  color: @violet;
+    color: @violet;
 }
 
 .storage.type {
-  color: @violet;
+    color: @violet;
 }
 
 .constant {
-  color: @yellow;
+    color: @yellow;
 
-  &.numeric,
-  &.boolean {
-    color: @orange;
-  }
+    &.numeric,
+    &.boolean {
+        color: @orange;
+    }
 }
 
 .variable {
-  color: @blue;
+    color: @blue;
 }
 
 .delimiter, .brace {
-  color: @base0;
+    color: @base0;
 }
 
 .delimiter.period {
-  color: @green;
+    color: @green;
 }
 
 .invalid.deprecated {
-  text-decoration: underline;
-  color: @red;
+    text-decoration: underline;
+    color: @red;
 }
 
 .invalid.illegal {
-  color: @red;
+    color: @red;
 }
 
 .string {
-  color: @green;
+    color: @green;
 
-  .constant.character.escape {
-    color: @base0;
-  }
-
-  &.regexp {
-    color: @cyan;
-
-    .source.ruby.embedded,
-    .string.regexp.arbitrary-repitition {
-      color: @red;
+    .constant.character.escape {
+        color: @base0;
     }
-  }
+
+    &.regexp {
+        color: @cyan;
+
+        .source.ruby.embedded,
+        .string.regexp.arbitrary-repitition {
+            color: @red;
+        }
+    }
 }
 
-.tree-view .entry.list-item:hover:before {
-	content: '';
-	background-color: @base04;
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 25px;
+.tree-view {
+    .entry.list-item:hover {
+        &:before {
+            content: '';
+            background-color: @base04;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 25px;
+        }
+
+        span {
+            color: #c0c5ce;
+        }
+    }
+}
+
+.tab-bar {
+    height:50px;
+    .tab {
+        height: 50px;
+        line-height: 50px;
+        &.modified:not(:hover) .close-icon {
+            // top: 23px;
+        }
+        &:first-child {
+            margin-left: 8px;
+        }
+        &.active {
+            line-height: 48px;
+            height: 50px;
+            .close-icon {
+                line-height: 50px;
+            }
+            &:before {
+                height: 50px;
+            }
+        }
+    }
 }
