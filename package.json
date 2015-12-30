@@ -4,6 +4,7 @@
   "version": "0.8.0",
   "description": "Base16 Ocean Dark Color Syntax",
   "repository": "https://github.com/GijsGoudzwaard/base16-ocean-dark",
+  "main": "lib/main",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
