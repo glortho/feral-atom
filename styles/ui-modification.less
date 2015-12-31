@@ -1,6 +1,17 @@
 @import "ui-variables";
 @import "colors";
 
+atom-text-editor, .tree-view-resizer {
+    /deep/ ::-webkit-scrollbar {
+        width: 4px !important;
+        height: 4px !important;
+    }
+
+    /deep/ ::-webkit-scrollbar-thumb {
+        background: #4D4D4D !important;
+    }
+}
+
 .tree-view {
     .entry.list-item:hover {
         &:before {
@@ -42,4 +53,12 @@ atom-pane {
             }
         }
     }
+}
+
+atom-panel.bottom.panel-bottom {
+	background-color: #272b35;
+
+	a, .branch-label, div:not(.package-updates-status-view):not(.deprecation-cop-status) {
+		color: #a7adba;
+	}
 }
