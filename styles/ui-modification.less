@@ -13,6 +13,8 @@ atom-text-editor, .tree-view-resizer {
 }
 
 .tree-view {
+	background-color: @base05;
+
     .entry.list-item:hover {
         &:before {
             content: '';
@@ -24,7 +26,7 @@ atom-text-editor, .tree-view-resizer {
         }
 
         span {
-            color: #c0c5ce;
+            color: @base1;
         }
     }
 }
@@ -56,9 +58,30 @@ atom-pane {
 }
 
 atom-panel.bottom.panel-bottom {
-	background-color: #272b35;
+	background-color: @base05;
 
 	a, .branch-label, div:not(.package-updates-status-view):not(.deprecation-cop-status) {
-		color: #a7adba;
+		color: @base0;
+	}
+}
+
+atom-panel.overlay {
+	padding:0;
+
+	atom-text-editor[mini] {
+		background-color: #1c1f26;
+		margin-bottom: 0;
+		height: 45px;
+		padding: 10px;
+		max-height:none;
+	}
+
+	ol.list-group {
+		margin:0;
+		line-height: 50px;
+
+		li {
+			padding: 5px 20px;
+		}
 	}
 }
