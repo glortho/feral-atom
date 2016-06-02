@@ -126,3 +126,137 @@ atom-text-editor, :host {
 	    background-color: rgba(0, 0, 0, 0.2) !important;
 	}
 }
+
+// feral additions/modifications
+
+.tag {
+  &.entity.name {
+    color: @call;
+  }
+  &.punctuation {
+    color: @subtle;
+  }
+}
+.entity.other.attribute-name {
+  color: @native;
+}
+
+.punctuation.embedded {
+  color: @subtle;
+}
+
+.flowtype {
+  &.property {
+    color: @key;
+  }
+  &.type {
+    color: @native;
+    &.builtin.class {
+      font-style: italic;
+    }
+    &.primitive {
+      font-style: italic;
+    }
+    &.punctuation {
+      color: @subtle;
+    }
+  }
+  &.typedef {
+    color: @highlight;
+    font-style: italic;
+  }
+}
+
+.js {
+  &.boolean {
+    color: @native;
+  }
+  &.class {
+    &.builtin {
+      color: @highlight;
+    }
+    &.name {
+      color: white;
+      font-style: italic;
+    }
+  }
+  &.console {
+    &.function {
+      color: @call;
+    }
+    &.object {
+      color: @highlight;
+    }
+  }
+  &.constant.numeric {
+    color: @highlight;
+  }
+  &.decorator {
+    color: @call;
+    .entity.name.tag {
+      color: @call;
+    }
+    .punctuation {
+      color: @call;
+    }
+
+  }
+  &.function.entity.name {
+    color: @keyCall;
+  }
+  &.string.quoted > .function.entity.name {
+    color: @string;
+  }
+  &.function-call > .entity.name {
+    color: @call;
+  }
+  &.keyword {
+    color: @native;
+    &.module {
+      color: @highlight;
+    }
+    &.operator {
+      color: @subtle;
+    }
+  }
+  &.null {
+    color: @dead;
+  }
+  &.object.key, &.function.method {
+    .string.unquoted {
+      color: @key;
+    }
+  }
+  .punctuation {
+    &.key-value, &.terminator {
+      color: @subtle;
+    }
+  }
+  &.variable {
+    color: white;
+    &.this {
+      color: @highlight;
+    }
+  }
+  &.storage {
+    &.modifier {
+      color: @native;
+    }
+  }
+  &.type {
+    color: @native;
+    &.dom {
+      color: @highlight;
+    }
+  }
+}
+
+.jsx {
+  .class.component {
+    color: @keyCall;
+  }
+}
+
+.line-number.cursor-line .current-line {
+  color: @highlight;
+}
